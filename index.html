@@ -729,21 +729,6 @@ if (!campaign) campaign= 'Vazio';
 urlnova = urlnova  + '&src='+source+'|'+medium+'|'+campaign;
 
 var exitutm = "";
-
-  jQuery(document).ready(function ($) {
-  myVar = setTimeout(MudarLink, 200);
-  function MudarLink(){
-
-  var voltarutm = "https://LuxChefpanelas.com.br/depoimentos?utm_source=voltarbrowser&utm_medium="+medium+"&utm_campaign="+campaign+"&utm_content="+content+""
-
-  history.pushState({}, "", location.href);
-  history.pushState({}, "", location.href);
-  window.onpopstate = function() {
-  	setTimeout(function() {
-  		location.href = voltarutm;
-  	}, 1);
-  };
-
   jQuery('.kits2 a').each(function () {
     var href = $(this).attr("href");
     $(this).attr("href", href+urlnova);
